@@ -34,9 +34,9 @@ namespace TRMDesktopUI
                 .Singleton<IEventAggregator, EventAggregator>();
 
 
-            //testing dep injection
-            _container
-                .PerRequest<ICalculations, Calculations>();
+            ////testing dep injection
+            //_container
+            //    .PerRequest<ICalculations, Calculations>();
 
 
             //refelection is slower but were only doing this ones so its ok. 

@@ -1,17 +1,29 @@
-﻿namespace TRMDesktopUI.ViewModels
+﻿using Caliburn.Micro;
+
+
+namespace TRMDesktopUI.ViewModels
 {
-    public class ShellViewModel
+    public class ShellViewModel : Conductor<object>
     {
 
 
 
-        private ICalculations _calculations;
+        //private ICalculations _calculations;       
 
-        public ShellViewModel(ICalculations calculations)
+        //public ShellViewModel(ICalculations calculations)
+        //{
+
+        //    _calculations = calculations;
+
+
+        //}
+
+
+        LoginViewModel _loginVM;
+
+
+        public ShellViewModel()
         {
-
-            _calculations = calculations;
-
 
         }
 
