@@ -33,6 +33,12 @@ namespace TRMDesktopUI
                 .Singleton<IWindowManager, WindowManager>()
                 .Singleton<IEventAggregator, EventAggregator>();
 
+
+            //testing dep injection
+            _container
+                .PerRequest<ICalculations, Calculations>();
+
+
             //refelection is slower but were only doing this ones so its ok. 
 
             GetType().Assembly.GetTypes()
@@ -40,6 +46,12 @@ namespace TRMDesktopUI
                 .Where(type => type.Name.EndsWith("ViewModel"))
                 .ToList()
                 .ForEach(viewModelType => _container.RegisterPerRequest(viewModelType, viewModelType.ToString(), viewModelType));
+
+
+
+
+
+
 
         }
 
